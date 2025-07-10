@@ -4,7 +4,7 @@
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
            xsi:type="MessageRead">
-  <Id>12345678-1234-1234-1234-123456789abc</Id>
+  <Id>ed6cfa0e-9aa1-42e0-9c66-1286b54e62b2</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Teach For Australia</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
@@ -30,44 +30,40 @@
   </FormSettings>
   <Permissions>ReadWriteItem</Permissions>
   <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
-    <VersionOverride Version="1.0">
-      <Requirements>
-        <bt:Sets DefaultMinVersion="1.8">
-          <bt:Set Name="Mailbox"/>
-        </bt:Sets>
-      </Requirements>
-      <Hosts>
-        <Host xsi:type="MailHost">
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
-            <OfficeCommand>
-              <Label resid="logButtonLabel"/>
-              <Icon>
-                <bt:Image size="16" resid="logIcon16"/>
-                <bt:Image size="32" resid="logIcon32"/>
-                <bt:Image size="80" resid="logIcon80"/>
-              </Icon>
-              <Action xsi:type="ExecuteFunction">
-                <FunctionName>forwardToLog</FunctionName>
-              </Action>
-            </OfficeCommand>
-          </ExtensionPoint>
-        </Host>
-      </Hosts>
-      <Resources>
-        <bt:Images>
-          <bt:Image id="logIcon16" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
-          <bt:Image id="logIcon32" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
-          <bt:Image id="logIcon80" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.pngg"/>
-        </bt:Images>
-        <bt:Urls>
-          <bt:Url id="functionFileUrl" DefaultValue="https://teachforaustralia.github.io/log-an-email/index.html"/>
-        </bt:Urls>
-        <bt:ShortStrings>
-          <bt:String id="logButtonLabel" DefaultValue="Log Email"/>
-        </bt:ShortStrings>
-      </Resources>
-      <FunctionFile resid="functionFileUrl"/>
-    </VersionOverride>
+  <VersionOverrides Version="1.0" xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0">
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.8">
+        <bt:Set Name="Mailbox"/>
+      </bt:Sets>
+    </Requirements>
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <OfficeCommand>
+            <Label resid="logButtonLabel"/>
+            <Icon>
+              <bt:Image size="16" resid="logIcon"/>
+              <bt:Image size="32" resid="logIcon"/>
+              <bt:Image size="80" resid="logIcon"/>
+            </Icon>
+            <Action xsi:type="ExecuteFunction">
+              <FunctionName>forwardToLog</FunctionName>
+            </Action>
+          </OfficeCommand>
+        </ExtensionPoint>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="logIcon" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="functionFileUrl" DefaultValue="https://teachforaustralia.github.io/log-an-email/index.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="logButtonLabel" DefaultValue="Log Email"/>
+      </bt:ShortStrings>
+    </Resources>
+    <FunctionFile resid="functionFileUrl"/>
   </VersionOverrides>
 </OfficeApp>
