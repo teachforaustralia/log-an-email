@@ -3,15 +3,14 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
            xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
-           xsi:type="MessageRead"
-           xsi:schemaLocation="http://schemas.microsoft.com/office/appforoffice/1.1 OfficeAppManifest.xsd">
+           xsi:type="MessageRead">
   <Id>12345678-1234-1234-1234-123456789abc</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Teach For Australia</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Log An Email"/>
   <Description DefaultValue="Forwards the email to log@teachforaustralia.org"/>
-  <IconUrl DefaultValue="https://teachforaustralia.github.io/log-an-email/src/icon32.png"/>
+  <IconUrl DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
   <SupportUrl DefaultValue="https://teachforaustralia.github.io/log-an-email"/>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -24,8 +23,8 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://teachforaustralia.github.io/log-an-email/src/index.html"/>
-        <RequestedHeight>250</RequestedHeight>
+        <SourceLocation DefaultValue="https://teachforaustralia.github.io/log-an-email/index.html"/>
+        <RequestedHeight>200</RequestedHeight>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -57,12 +56,12 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="logIcon16" DefaultValue="https://teachforaustralia.github.io/log-an-email/src/icon16.png"/>
-          <bt:Image id="logIcon32" DefaultValue="https://teachforaustralia.github.io/log-an-email/src/icon32.png"/>
-          <bt:Image id="logIcon80" DefaultValue="https://teachforaustralia.github.io/log-an-email/src/icon80.png"/>
+          <bt:Image id="logIcon16" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
+          <bt:Image id="logIcon32" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.png"/>
+          <bt:Image id="logIcon80" DefaultValue="https://teachforaustralia.github.io/log-an-email/bcc.pngg"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="functionFileUrl" DefaultValue="https://teachforaustralia.github.io/log-an-email/src/index.html"/>
+          <bt:Url id="functionFileUrl" DefaultValue="https://teachforaustralia.github.io/log-an-email/index.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="logButtonLabel" DefaultValue="Log Email"/>
